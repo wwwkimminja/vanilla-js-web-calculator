@@ -91,6 +91,7 @@ function inputOperator(op) {
 }
 
 function inputEqual() {
+    if (left === null || right === null || !operator) return;
     if (result) {
         left = answer
         right = null
