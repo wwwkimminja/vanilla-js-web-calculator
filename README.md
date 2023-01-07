@@ -1,1 +1,1 @@
-# vanilla-js-web-caluator
+# vanilla-js-web-calculator
