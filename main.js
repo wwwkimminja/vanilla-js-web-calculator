@@ -60,3 +60,28 @@ function inputNum(num) {
     }
     save()
 }
+
+function inputOperator(op) {
+
+    if (left === null && op === "-") {
+        left = "-"
+        save()
+        return;
+    }
+
+    if (left === "-" && op === "-") {
+        return;
+
+    }
+
+    if (op === "-" && operator !== null && right === null) {
+        right = "-";
+        save()
+        return;
+    }
+
+
+    operator = op
+    save()
+
+}
