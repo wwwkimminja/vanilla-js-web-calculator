@@ -47,16 +47,19 @@ function inputNum(num) {
             left = `${num}`
         } else {
             if (num === 0 && parseInt(left) === 0) return;
+            else if (num !== 0 && parseInt(left) === 0) left = `${num}`
+            else left += `${num}`
 
-            left += `${num}`
         }
     } else {
-
         if (right === null) {
             right = `${num}`
-        } else {
+        } else if (result || answer) {
+            return;
+        }
+        else {
             if (num === 0 && parseInt(right) === 0) return;
-            right = +`${num}`
+            right += `${num}`
         }
     }
     save()
