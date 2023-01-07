@@ -1,5 +1,6 @@
 let left = null, right = null, operator = null
 let result = false;
+let answer = null
 
 function save() {
     const inp = document.getElementById("top-input");
@@ -16,8 +17,8 @@ function save() {
     value += right + " "
     inp.value = value
 
-    if (res) {
-        let answer = 0
+    if (result) {
+
         switch (operator) {
             case "+":
                 answer = parseInt(left) + parseInt(right)
@@ -84,4 +85,19 @@ function inputOperator(op) {
     operator = op
     save()
 
+}
+
+function inputEqual() {
+    if (result) {
+        left = answer
+        right = null
+        operator = null
+        answer = null
+        result = false
+
+    } else {
+        result = true
+    }
+
+    save()
 }
